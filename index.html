@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    body {
+        --bg: #0064a6;
+        --col: #fff;
+        background-color: var(--bg);
+        color: var(--col);
+        font-family: Poppins;
+        transition: all .25s;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .c {
+        flex-flow: column;
+    }
+
+    .w100p {
+        width: 100%;
+    }
+
+    .main {
+
+        .nav.scrolled{
+            background-color: var(--bg);
+            padding: 20px 30px;
+            box-shadow: 0 10px 30px #0004;
+        }
+        & .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: all .25s;
+
+
+            padding: 30px 50px;
+            justify-content: space-between;
+
+            & .menuList {
+                margin: 0 20px;
+
+                & a {
+                    color: var(--col);
+                }
+            }
+        }
+    }
+
+
+    .proPan {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & .product {
+            margin: 20px;
+            cursor: pointer;
+            transition: all .25s;
+
+            & img {
+                width: 60px;
+            }
+        }
+
+        & .product:hover {
+            transform: translateY(-20px);
+        }
+
+        & .product.min {
+            transform: scale(.8);
+        }
+    }
+
+    .genCont {
+        max-width: 1600px;
+        align-items: flex-start;
+
+        & .fr {
+            max-width: 800px;
+            margin: 50px;
+        }
+    }
+
+    .revPan {
+        flex-flow: row wrap;
+
+        & .revBox.small{
+            transform: scale(.9);
+        }
+        & .revBox {
+            width: 350px;
+            aspect-ratio: 8 / 12;
+            background: linear-gradient(45deg, #009aff, #b900ff);
+            border-radius: 20px;
+            margin: 30px;
+            padding: 20px;
+            box-shadow: 0 10px 30px #0000004a;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            transition: all .25s;
+
+            
+            & .reviews {
+                & *{
+                    pointer-events: none;
+                }
+                
+                & img {
+                    width: 150px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    box-shadow: 0 5px 20px #0004, inset 4px 6px 5px #fff;
+                }
+            }
+        }
+    }
+</style>
+
+<body>
+
+    <section class="main">
+        <div class="nav flex w100p">
+            <div class="logo">
+                <img src="img/logo.png" alt="" width="75px">
+            </div>
+
+            <div class="menu flex">
+
+                <div class="menuList">
+                    <div class="link">
+                        <a href="#home">Product</a>
+                    </div>
+                </div>
+                <div class="menuList">
+                    <div class="link">
+                        <a href="#home">Reviews</a>
+                    </div>
+                </div>
+                <div class="menuList">
+                    <div class="link">
+                        <a href="#home">Flavours</a>
+                    </div>
+                </div>
+                <div class="menuList">
+                    <div class="link">
+                        <a href="#home">About Us</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="genCont w100p flex" style="margin-top: 200px;">
+
+        <div class="fr">
+            <h1 style="margin-bottom: 50px; font-size: 2.5em;">Shake & Open for Power..!!</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur similique optio laborum, soluta
+                in pariatur. Aut magnam quod, quasi pariatur deleniti provident, porro vel ab accusamus nobis minus
+                ratione aperiam?
+            </p>
+
+
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ratione corrupti facere consectetur
+                sint. Iusto quisquam suscipit vitae quas est rem, odio repellendus! Pariatur autem impedit saepe
+                repellendus quisquam libero nobis maiores omnis maxime repudiandae eum est provident accusantium dolore
+                quia, eius nam quos atque dolorem? Sint facere aperiam animi maiores, at asperiores. Voluptatem dolore
+                aut vel consequuntur aspernatur fuga?
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ratione corrupti facere consectetur
+                sint. Iusto quisq
+            </p>
+        </div>
+        <div class="img fr">
+            <img src="img/pepsi001.png" id="mainImg" alt="">
+        </div>
+    </section>
+
+    <div class="genCont revPan w100p flex">
+
+        <div class="revBox w100p flex">
+            <div class="reviews flex c">
+                <div class="img" style="margin-bottom: 30px;">
+                    <img src="img/r1.jpg" alt="">
+                </div>
+
+                <div class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dicta in, nostrum distinctio
+                    corrupti maiores, harum nesciunt nemo hic assumenda repellat reprehenderit nihil laboriosam eligendi
+                    praesentium cumque cupiditate voluptates officia.
+                </div>
+<br>
+                <div class="name">
+                    <i>- Rama</i>
+                </div>
+            </div>
+        </div>
+        <div class="revBox w100p flex">
+            <div class="reviews flex c">
+                <div class="img" style="margin-bottom: 30px;">
+                    <img src="img/r2.png" alt="">
+                </div>
+
+                <div class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dicta in, nostrum distinctio
+                    corrupti maiores, harum nesciunt nemo hic assumenda repellat reprehenderit nihil laboriosam eligendi
+                    praesentium cumque cupiditate voluptates officia.
+                </div>
+<br>
+                <div class="name">
+                    <i>- Rama</i>
+                </div>
+            </div>
+        </div>
+        <div class="revBox w100p flex">
+            <div class="reviews flex c">
+                <div class="img" style="margin-bottom: 30px;">
+                    <img src="img/r3.webp" alt="">
+                </div>
+
+                <div class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dicta in, nostrum distinctio
+                    corrupti maiores, harum nesciunt nemo hic assumenda repellat reprehenderit nihil laboriosam eligendi
+                    praesentium cumque cupiditate voluptates officia.
+                </div>
+<br>
+                <div class="name">
+                    <i>- Rama</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" footer flex c" style="padding: 20px 20px 200px 20px;">
+        <div class="fr left flex c">
+
+            <div class="logo">
+                <img src="img/logo.png" width="75px" alt="">
+            </div>
+
+            <div class="flink">
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="flink">
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="flink">
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="flink">
+                <a href="#">Copyright</a>
+            </div>
+            <div class="flink">
+                <a href="#">Careers</a>
+            </div>
+
+
+            <style>
+                .footer{
+                    padding-bottom: 200px;
+                    background-color: #000;
+                }
+                .footer a{
+                    color: #fff;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                }
+                .socio img{
+                    filter: invert(1);
+                    opacity: 1;
+                    margin: 6px;
+                    cursor: pointer;
+                }
+                .ico{
+                    width: 30px;
+                    height: 30px;
+
+                }
+            </style>
+            <div class="socio">
+                
+                <img src="https://unpkg.com/ionicons@7.1.0/dist/svg/logo-facebook.svg" class="ico" alt="">
+                
+                <img src="https://unpkg.com/ionicons@7.1.0/dist/svg/logo-whatsapp.svg" class="ico" alt="">
+                
+                <img src="https://unpkg.com/ionicons@7.1.0/dist/svg/logo-youtube.svg" class="ico" alt="">
+                
+                <img src="https://unpkg.com/ionicons@7.1.0/dist/svg/logo-instagram.svg" class="ico" alt="">
+                
+                
+                <img src="https://unpkg.com/ionicons@7.1.0/dist/svg/logo-linkedin.svg" class="ico" alt="">
+            </div>
+
+        </div>
+
+        <div class="end">
+
+        </div>
+
+    </div>
+
+    <div class="proPan flex">
+        <div class="product flex" onmouseenter="mouseEntered(this)" onmouseleave="mouseLeft(this);">
+            <img src="img/pepsi001.png" alt="">
+        </div>
+        <div class="product flex" onmouseenter="mouseEntered(this)" onmouseleave="mouseLeft(this);">
+            <img src="img/pepsi002.png" alt="">
+        </div>
+        <div class="product flex" onmouseenter="mouseEntered(this)" onmouseleave="mouseLeft(this);">
+            <img src="img/pepsi003.png" alt="">
+        </div>
+    </div>
+
+    <style>
+        .black{
+            position: absolute;
+        }
+        .spot{
+            transform: translate(-50%,-50%) scale(0);
+            transition: 1s all ;
+            
+            width: 2000px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: #000;
+            /* transition-delay: .01s; */
+        }
+        .black.active .spot{
+            transform: translate(-50%,-50%) scale(1);
+
+
+        }
+
+    </style>
+
+
+    <script>
+        var log = console.log;
+        function op(e) { return document.querySelector(e) }
+        function opp(e) { return document.querySelectorAll(e) }
+        function mouseEntered(elem) {
+            var obj = {
+                1: {
+                    color: "#fff",
+                    bg: "#0064a6",
+                },
+                2: {
+                    color: "#000",
+                    bg: "#eff0f2",
+                },
+                3: {
+                    color: "#fff",
+                    bg: "#1b1d1f",
+                }
+            }
+            elem = elem.querySelector("img")
+            log(elem.src)
+            var datax = obj[elem.getAttribute('src').replace("img/pepsi00", "").replace(".png", "")];
+
+            document.body.style.setProperty("--bg", datax['bg']);
+            document.body.style.setProperty("--col", datax['color']);
+            op("#mainImg").src = elem.src;
+        }
+
+        function mouseLeft() {
+            log(234)
+        }
+
+        window.addEventListener("scroll",(e)=>{
+            log('s')
+            if(window.scrollY>50){
+                op(".nav").classList.add("scrolled");
+            }else{
+                op(".nav").classList.remove("scrolled");
+            }
+        })
+        
+        opp(".revBox").forEach(val=>{
+            val.addEventListener('mouseenter',e=>{
+                var x=e.layerX;
+                var y=e.layerY;
+
+                var html=`
+                <div class="black" style="left:${x}px; top: ${y}px;">
+                    <div class="spot"></div>    
+                </div>
+                `
+
+                setTimeout(()=>{
+                    val.querySelector('.black').classList.add("active")
+                },10)
+
+                val.insertAdjacentHTML("afterbegin",html)
+
+                
+            })
+
+            val.addEventListener('mouseleave',e=>{
+                try{
+
+                    var x=e.layerX;
+                    var y=e.layerY;
+                    val.querySelector('.black').style.left=x+'px';
+                    val.querySelector('.black').style.top=y+'px';
+
+                    val.querySelector('.black').classList.remove('active');
+                    setTimeout(()=>{
+                        val.querySelector(".black").remove();
+                    },1000)
+                }catch(e){
+                    log(e)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
